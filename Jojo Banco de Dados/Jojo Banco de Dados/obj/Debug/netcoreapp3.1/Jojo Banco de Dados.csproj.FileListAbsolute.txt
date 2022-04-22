@@ -1,0 +1,5 @@
+C:\Users\Meu Computador\source\repos\Jojo Banco de Dados\Jojo Banco de Dados\obj\Debug\netcoreapp3.1\Jojo Banco de Dados.csproj.AssemblyReference.cache
+C:\Users\Meu Computador\source\repos\Jojo Banco de Dados\Jojo Banco de Dados\obj\Debug\netcoreapp3.1\Jojo Banco de Dados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Meu Computador\source\repos\Jojo Banco de Dados\Jojo Banco de Dados\obj\Debug\netcoreapp3.1\Jojo Banco de Dados.AssemblyInfoInputs.cache
+C:\Users\Meu Computador\source\repos\Jojo Banco de Dados\Jojo Banco de Dados\obj\Debug\netcoreapp3.1\Jojo Banco de Dados.AssemblyInfo.cs
+C:\Users\Meu Computador\source\repos\Jojo Banco de Dados\Jojo Banco de Dados\obj\Debug\netcoreapp3.1\Jojo Banco de Dados.csproj.CoreCompileInputs.cache
