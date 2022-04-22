@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Meu Computador\\source\\repos\\Jojo Banco de Dados\\Jojo Banco de Dados\\Jojo Banco de Dados.csproj": {}
+    "D:\\4 - Códigos\\VisualStudio\\repos\\Banco-De-Dados-T2\\Jojo Banco de Dados\\Jojo Banco de Dados\\Jojo Banco de Dados.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Meu Computador\\source\\repos\\Jojo Banco de Dados\\Jojo Banco de Dados\\Jojo Banco de Dados.csproj": {
+    "D:\\4 - Códigos\\VisualStudio\\repos\\Banco-De-Dados-T2\\Jojo Banco de Dados\\Jojo Banco de Dados\\Jojo Banco de Dados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Meu Computador\\source\\repos\\Jojo Banco de Dados\\Jojo Banco de Dados\\Jojo Banco de Dados.csproj",
+        "projectUniqueName": "D:\\4 - Códigos\\VisualStudio\\repos\\Banco-De-Dados-T2\\Jojo Banco de Dados\\Jojo Banco de Dados\\Jojo Banco de Dados.csproj",
         "projectName": "Jojo Banco de Dados",
-        "projectPath": "C:\\Users\\Meu Computador\\source\\repos\\Jojo Banco de Dados\\Jojo Banco de Dados\\Jojo Banco de Dados.csproj",
-        "packagesPath": "C:\\Users\\Meu Computador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Meu Computador\\source\\repos\\Jojo Banco de Dados\\Jojo Banco de Dados\\obj\\",
+        "projectPath": "D:\\4 - Códigos\\VisualStudio\\repos\\Banco-De-Dados-T2\\Jojo Banco de Dados\\Jojo Banco de Dados\\Jojo Banco de Dados.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\4 - Códigos\\VisualStudio\\repos\\Banco-De-Dados-T2\\Jojo Banco de Dados\\Jojo Banco de Dados\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Meu Computador\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,7 +42,11 @@
           "dependencies": {
             "RavenDB.Client": {
               "target": "Package",
-              "version": "[4.1.1, )"
+              "version": "[5.3.102, )"
+            },
+            "RavenDB.Embedded": {
+              "target": "Package",
+              "version": "[5.3.102, )"
             }
           },
           "imports": [
@@ -60,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
