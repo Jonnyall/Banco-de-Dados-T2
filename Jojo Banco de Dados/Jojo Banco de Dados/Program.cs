@@ -2,6 +2,18 @@ using System;
 using System.Collections.Generic;
 using Raven.Client.Documents;
 
+
+/// Variavies Global
+/// URL 
+/// DATABASE
+
+public class Global
+	{
+	public static string URL = "http://127.0.0.1:8080";
+	public static string DATABASE = "JojoNET";
+	}
+
+
 namespace Jojo_Banco_de_Dados
 {
 	class Program
@@ -9,7 +21,7 @@ namespace Jojo_Banco_de_Dados
 		static void Main(string[] args)
 		{
 			//Programa Principal.
-			BD.inicializa();
+			BD.insere();
 		}
 	}
 
@@ -57,8 +69,8 @@ class BD
 		// Criando documentação.
 		var documentStore = new DocumentStore()
 		{
-			Database = "JojoNET",
-			Urls = new[] { "http://127.0.0.1:8080" }
+			Database = Global.DATABASE,
+			Urls = new[] { Global.URL }
 		}.Initialize();
 
 		using (var session = documentStore.OpenSession())
@@ -149,6 +161,59 @@ class BD
 
 			//Finalmente, Salvando as auterações.
 			session.SaveChanges();
+		}
+	}
+
+	static public void insere()
+	{
+		// Criando documentação.
+		var documentStore = new DocumentStore()
+		{
+			Database = Global.DATABASE,
+			Urls = new[] { Global.URL }
+		}.Initialize();
+
+		using (var session = documentStore.OpenSession())
+		{
+			//Criando o Diretor.
+			var diretor = new Diretor { Nome = "Maria", Filmes = new List<string>() };
+
+			//Criando os Filmes.
+			var filme = new Filme { Titulo = "Como se Fosse a Primeira Vez", Duracao = 200, Orcamento = 40000F, Roteiro = null };
+
+			//Criando os Roteiros.
+			var rot = new Roteiro
+			{
+				Titulo = "Uma Comédia",
+				Enredo = "O veterinário da Playboy, Henry, decide namorar Lucy ...",
+				Elenco = "Adam SandlerHenry como Roth, Drew Barrymore como Lucy Whitmore ...",
+				Cenas = new List<string>()
+			};
+
+			//Criando as Cenas
+			var cena_1 = new Cena { EfeitosEspeciais = false, Duracao = 20, Locacao = "Praia" };
+			var cena_2 = new Cena { EfeitosEspeciais = false, Duracao = 35, Locacao = "Chalé" };
+			var cena_3 = new Cena { EfeitosEspeciais = false, Duracao = 35, Locacao = "Cafetaria" };
+
+			//Salvando todas as instancias.
+			session.Store(diretor);
+			session.Store(filme);
+			session.Store(rot);
+			session.Store(cena_1);
+			session.Store(cena_2);
+			session.Store(cena_3);
+
+			//Linkando as "Tabelas".
+			diretor.Filmes.Add(filme.Id);
+			filme.Roteiro = rot.Id;
+			rot.Cenas.Add(cena_1.Id);
+			rot.Cenas.Add(cena_2.Id);
+			rot.Cenas.Add(cena_3.Id);
+
+
+			//Salvando as alterações.
+			session.SaveChanges();
+
 		}
 	}
 }
